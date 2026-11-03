@@ -55,7 +55,7 @@ if (millis() >= 60000) { // si han pasado 60 segundos desde que se encio la plac
 // ==== LD2410 =========
   radar.read();// toma el string que llega por serial y saca cada dato del string y los guarda en variables internas para luego acceder a su valor
 
-if (millis() - ultimaImpresion >= 500) {// si el tiempo actual menos el tiempo de la ultima impresion es mayo o igual a 500
+if (millis() - ultimaImpresion >= 500) {// si el tiempo actual menos el tiempo de la ultima impresion es mayor o igual a 500
   ultimaImpresion = millis();// guardamos el tiempo actual como la hora de esta impresion 
 
   if (!radar.isConnected()) { // isConnected() dice si el radar sigue mandando datos con regularidad (a diferencia de radar.begin(Serial1), que solo comprueba al arrancar),Si la funcion isConnected() devuelve false, avisamos y no imprimimos valores viejos.
