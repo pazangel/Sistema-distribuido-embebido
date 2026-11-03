@@ -12,3 +12,14 @@ void loop() {
 
   delay(500);                          // espera medio segundo entre lecturas
 }
+/*
+MUCHA LUZ:
+el LDR baja su resistencia le toca poco voltaje del reparto
+casi todo el voltaje cae en la resistencia fija
+el pin lee un voltaje alto, valor del ADC alto (hacia 4095)
+
+POCA LUZ (oscuro):
+el LDR sube mucho su resistencia se queda con casi todo el voltaje
+a la resistencia fija le llega muy poco
+el pin lee un voltaje bajo, valor del ADC bajo (hacia 0)
+*/
