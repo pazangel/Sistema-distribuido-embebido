@@ -14,7 +14,6 @@ aun asi ocupa un id para identificar a ese sensor
 
 void setup() {
   Serial.begin(9600);
-  while(!Serial){};
 
   Serial.println("Iniciando BMP180...");
   Wire.setPins(PIN_SDA, PIN_SCL);// guarda los pines para despues inicializar la comunicacion I2C

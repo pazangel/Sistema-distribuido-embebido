@@ -1,4 +1,4 @@
-#include <DHT.h>          // librería que sabe medir los pulsos de 26 µs / 70 µs
+#include <DHT.h>          
 
 #define DHTPIN 20         // GPIO donde conectaste el pin S
 #define DHTTYPE DHT11     // modelo del sensor (la librería también soporta DHT22)
