@@ -57,10 +57,3 @@ El PIR necesita un tiempo de calentamiento al encenderse de 30 a 60 s (por eso e
 Durante ese tiempo se estabiliza con el calor del ambiente, si no se hace esto puede no detectar movimientos reales y aveces puede detectar movimientos irreales, esto solo pasa al inicio
 asta que el sensor caliente
 */
-
-/*
-Lectura de sensores/
-├── UnoR4WiFi_presencia/UnoR4WiFi_presencia.ino
-├── NanoESP32_presencia/NanoESP32_presencia.ino
-└── ESP32C6_ambiente/ESP32C6_ambiente.ino
-*/
