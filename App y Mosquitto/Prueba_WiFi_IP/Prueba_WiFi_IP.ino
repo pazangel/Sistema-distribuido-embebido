@@ -4,9 +4,9 @@
 void setup() {
   Serial.begin(9600);
 
-  WiFi.begin(WIFI_SSID, WIFI_PASS);
+  WiFi.begin(SSID_LOCAL, PASS_LOCAL);
   /*
-  WiFi.begin enciende y configura el radio WiFi, guarda el nombre de la red y la contraseña, empieza el proceso de conexión:
+  WiFi.begin enciende y configura el radio WiFi como WIFI_STA, guarda el nombre de la red y la contraseña, empieza el proceso de conexión:
 
 1. buscar la red (el router con ese nombre)
 2. autenticarse (la contraseña)
