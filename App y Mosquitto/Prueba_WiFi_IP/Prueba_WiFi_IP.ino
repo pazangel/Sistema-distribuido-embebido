@@ -19,7 +19,7 @@ void setup() {
     Serial.print(".");
   }
 /*
-  podemos comparara a WiFi.status() con diferentes valores:
+  podemos comparar a WiFi.status() con diferentes valores:
 
 +--------------------+--------------------------------------------------------------------+
 | Valor              | Significado                                                        |
