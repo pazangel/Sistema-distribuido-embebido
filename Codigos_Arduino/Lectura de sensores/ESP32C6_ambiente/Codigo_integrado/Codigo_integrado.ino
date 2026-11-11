@@ -12,7 +12,7 @@ unsigned long UltimaLecturaSensores = 0;
 #define PIN_SCL 7
 
 //pin y modelo del DHT
-#define DHTPIN 20         // GPIO donde conectaste el pin S
+#define DHTPIN 20         // Pin difital
 #define DHTTYPE DHT11     // modelo del sensor (la librería también soporta DHT22)
 
 //pin del LDR y tiempo de ultima lectura

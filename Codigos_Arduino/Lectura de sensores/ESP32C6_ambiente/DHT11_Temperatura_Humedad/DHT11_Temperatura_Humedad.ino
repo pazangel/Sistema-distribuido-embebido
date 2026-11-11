@@ -1,6 +1,6 @@
 #include <DHT.h>          
 
-#define DHTPIN 20         // GPIO donde conectaste el pin S
+#define DHTPIN 20         // pin digital
 #define DHTTYPE DHT11     // modelo del sensor (la librería también soporta DHT22)
 
 DHT dht(DHTPIN, DHTTYPE); // objeto que representa alsensor, guarda los datos que le pasamos el pin y el modelo del sensor
