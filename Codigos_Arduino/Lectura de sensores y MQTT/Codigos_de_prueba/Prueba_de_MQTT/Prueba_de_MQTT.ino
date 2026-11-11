@@ -23,11 +23,10 @@ void setup() {
   mqtt.setServer(SERVIDOR_IP, 1883);// con esta funcion es le decimos que de este dispositivo o servidor queremos acceder a este pruerto donde esta el servicio MQTT, 
   //para decir a que dispositivo servidor se le pone la ip del dispositivo o servidor
   mqtt.setKeepAlive(60);// si en 60s el cliente ya no responde, el broker lo da por caido o desconectado, de esta forma se entenera el broker que el cliente se desconecto, 
-  //setKeepAlive manda ping al broker para decirle que sigue conectado
 }
 
 void loop() {
-      while (!mqtt.connected()) {// la funcion mqtt.connected() Verifica si la sesión MQTT esta activa y devuelve true si sí y false si no, 
+while (!mqtt.connected()) {// la funcion mqtt.connected() Verifica si la sesión MQTT esta activa y devuelve true si sí y false si no, 
   //Mientras este desconectado vueleve a intentar conectarse, una vez que la condicion if (mqtt.connect("nodo3")) de true se vuelve a verificar en el while, 
   //ahora seria true con not cambia a false y se sale del ciclo
     Serial.print("Conectando a MQTT... ");
@@ -67,10 +66,11 @@ void loop() {
 | 5     | el broker rechazó la conexión: no autorizado                                                    |
 +-------+-------------------------------------------------------------------------------------------------+
 */
-      delay(2000);                          // espera y reintenta
+      delay(2000);// espera y reintenta
     }
   }
-  mqtt.loop();// Mantiene el keep-alive mandando pings y si fuera suscriptor, además recibiria y procesaria lo que llegara del broker.
+  mqtt.loop();// Mantiene el keep-alive mandando pings los cuales se usan para decirle al broker que sigue conectado y para que el broker conteste que sigue escuchando 
+//y si fuera suscriptor recibiria y procesaria lo que llegara del broker, si despues de los segundos que se pusieron en mqtt.setKeepAlive(); ya no manda pings el clinete, el broker lo da por caido
 
     mqtt.publish("saludo", "Hola Mundo"); // La funcion mqtt.publish es para mandar mensajes al broker, y tiene una estructura, mqtt.publish(topic, mensaje)
     Serial.println("Publicado");
